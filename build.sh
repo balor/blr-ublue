@@ -9,9 +9,10 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
-dnf5 install -y tmux \
-  keyd
+# keyd service
+sudo dnf5 -y copr enable alternateved/keyd
+sudo dnf5 -y install keyd
+sudo dnf5 -y copr disable alternateved/keyd
 
 # Use a COPR Example:
 #

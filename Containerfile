@@ -2,6 +2,8 @@ FROM ghcr.io/ublue-os/aurora-dx:stable
 
 ### MODIFICATIONS
 
+COPY etc/keyd /etc/keyd/
+
 COPY build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
