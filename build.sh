@@ -10,9 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # keyd service
-sudo dnf5 -y copr enable alternateved/keyd
-sudo dnf5 -y install keyd
-sudo dnf5 -y copr disable alternateved/keyd
+dnf5 -y copr enable alternateved/keyd
+dnf5 -y install keyd
+dnf5 -y copr disable alternateved/keyd
 
 # Use a COPR Example:
 #
@@ -24,3 +24,4 @@ sudo dnf5 -y copr disable alternateved/keyd
 #### Example for enabling a System Unit File
 
 # systemctl enable podman.socket
+systemctl enable keyd.service
