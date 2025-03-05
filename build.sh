@@ -14,6 +14,8 @@ systemctl enable keyd.service
 # btop
 dnf5 -y install btop
 
+flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # flatpaks - comms
 flatpak --system install -y flathub org.signal.Signal
 flatpak --system install -y flathub com.mattermost.Desktop
