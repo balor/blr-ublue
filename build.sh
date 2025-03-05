@@ -4,15 +4,30 @@ set -ouex pipefail
 
 ### Install packages
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-
 # keyd service
 dnf5 -y copr enable alternateved/keyd
 dnf5 -y install keyd
 dnf5 -y copr disable alternateved/keyd
+
+systemctl enable keyd.service
+
+# btop
+dnf5 -y install btop
+
+# flatpaks - comms
+flatpak --system install -y flathub org.signal.Signal
+flatpak --system install -y flathub com.mattermost.Desktop
+flatpak --system install -y flathub com.slack.Slack
+
+# flatpacks - applications
+flatpak --system install -y flathub org.kde.ktorrent
+flatpak --system install -y flathub org.wezfurlong.wezterm
+flatpak --system install -y flathub md.obsidian.Obsidian
+flatpak --system install -y flathub app.zen_browser.zen
+flatpak --system install -y flathub com.github.wwmm.easyeffects
+flatpak --system install -y flathub com.spotify.Client
+
+### Install system flatpaks
 
 # Use a COPR Example:
 #
@@ -20,8 +35,3 @@ dnf5 -y copr disable alternateved/keyd
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-
-#### Example for enabling a System Unit File
-
-# systemctl enable podman.socket
-systemctl enable keyd.service
