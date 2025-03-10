@@ -15,7 +15,7 @@ systemctl enable keyd.service
 dnf5 -y install btop
 
 # ivpn
-dnf5 -y config-manager addrepo --from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
+cd /etc/yum.repos.d/ && wget https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
 dnf5 -y install ivpn
 cd /etc/yum.repos.d/ && rm ivpn.repo
 
