@@ -16,8 +16,8 @@ dnf5 -y install btop
 
 # ivpn
 dnf5 -y config-manager addrepo --from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
-rpm-ostree install ivpn
-cd /etc/yum.repos.d/ && rm ivpn.repo
+dnf5 -y install ivpn
+rm /etc/yum.repos.d/ivpn.repo
 
 ### Install system flatpaks
 
