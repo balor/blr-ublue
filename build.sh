@@ -15,9 +15,13 @@ systemctl enable keyd.service
 dnf5 -y install btop
 
 # ivpn
-dnf5 -y config-manager addrepo --from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
+# dnf5 -y config-manager addrepo --from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
+# dnf5 -y install ivpn
+# rm /etc/yum.repos.d/ivpn.repo
+
+dnf5 -y copr enable architektapx/ivpn
 dnf5 -y install ivpn
-rm /etc/yum.repos.d/ivpn.repo
+dnf5 -y copr disable architektapx/ivpn
 
 ### Install system flatpaks
 
