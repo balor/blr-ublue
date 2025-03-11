@@ -15,12 +15,9 @@ systemctl enable keyd.service
 dnf5 -y install btop
 
 # ivpn
-mkdir -p /opt/ivpn/dnscrypt-proxy
-cd /tmp
-wget --no-hsts https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
-mv ivpn.repo /etc/yum.repos.d/
-dnf5 -y install ivpn
-rm /etc/yum.repos.d/ivpn.repo
+dnf5 -y config-manager addrepo --from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
+rpm-ostree install ivpn
+cd /etc/yum.repos.d/ && rm ivpn.repo
 
 ### Install system flatpaks
 
