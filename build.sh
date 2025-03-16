@@ -14,6 +14,9 @@ systemctl enable keyd.service
 # btop
 dnf5 -y install btop
 
+# polish hunspell dict
+dnf5 -y install hunspell-pl
+
 ### Install system flatpaks
 
 # Use a COPR Example:
