@@ -17,6 +17,9 @@ dnf5 -y install btop
 # polish hunspell dict
 dnf5 -y install hunspell-pl
 
+# glib-2
+dnf5 -y install glib2 glib2-devel
+
 ### Install system flatpaks
 
 # Use a COPR Example:
