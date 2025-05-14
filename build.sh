@@ -20,6 +20,9 @@ dnf5 -y install hunspell-pl
 # glib-2
 dnf5 -y install glib2 glib2-devel
 
+# foot terminal
+dnf5 -y install foot
+
 ### Install system flatpaks
 
 # Use a COPR Example:
