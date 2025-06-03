@@ -23,6 +23,9 @@ dnf5 -y install glib2 glib2-devel
 # foot terminal
 dnf5 -y install foot
 
+# acpi event daemon
+dnf5 -y install acpid
+
 ### Install system flatpaks
 
 # Use a COPR Example:
