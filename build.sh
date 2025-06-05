@@ -26,6 +26,9 @@ dnf5 -y install foot
 # acpi event daemon
 dnf5 -y install acpid
 
+# libinput utilities - for fixing the problem with touchpad scroll speed
+dnf5 -y install libinput-utils
+
 ### Install system flatpaks
 
 # Use a COPR Example:
