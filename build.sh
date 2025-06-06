@@ -11,17 +11,14 @@ dnf5 -y copr disable alternateved/keyd
 
 systemctl enable keyd.service
 
-# btop
-dnf5 -y install btop
+# tools
+dnf5 -y install btop grim foot
 
 # polish hunspell dict
 dnf5 -y install hunspell-pl
 
 # glib-2
 dnf5 -y install glib2 glib2-devel
-
-# foot terminal
-dnf5 -y install foot
 
 # acpi event daemon
 dnf5 -y install acpid
