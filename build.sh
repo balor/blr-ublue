@@ -23,8 +23,8 @@ dnf5 -y install glib2 glib2-devel
 # acpi event daemon
 dnf5 -y install acpid
 
-# stuff for fixing touchpad scroll speed
-# dnf5 -y install libinput-utils systemd-devel libinput-devel ninja-build meson
+# usefull stuff for building software
+dnf5 -y install libinput-utils systemd-devel libinput-devel ninja-build meson
 
 ### Install system flatpaks
 
