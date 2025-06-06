@@ -12,7 +12,7 @@ dnf5 -y copr disable alternateved/keyd
 systemctl enable keyd.service
 
 # tools
-dnf5 -y install btop grim foot
+dnf5 -y install btop foot
 
 # polish hunspell dict
 dnf5 -y install hunspell-pl
